@@ -1,20 +1,13 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-import PartOfBook from "../components/part-of-book"
-import PostFooter from '../components/PostFooter'
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const href = this.props.location.href
-    const { previous, next } = this.props.pageContext
-
-    const publishedDate = new Date(post.frontmatter.publishedDate).toISOString()
     const modDate = post.frontmatter.modifiedDate
     const modifiedDate =
       modDate.toLowerCase() !== "invalid date"

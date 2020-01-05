@@ -2,13 +2,14 @@ const siteAddress = new URL('https://klequis.io/')
 
 module.exports = {
   siteMetadata: {
-    title: "klequis' blog",
+    title: "NodeSchool Eastbay (San Francisco)",
     author: "klequis",
     description: "A blog on software development.",
-    siteUrl: "https://klequis.io",
-    social: {
-      twitter: "at_klequis",
-    },
+    // TODO: add site URL
+    siteUrl: "https://none-yet.com",
+    // social: {
+    //   twitter: "at_klequis",
+    // },
   },
   plugins: [
 

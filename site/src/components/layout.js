@@ -64,13 +64,22 @@ class Layout extends React.Component {
         }}
       >
         <header>{header}</header>
-        <main>{children}</main>
+        <main>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <h2>Main section - not much to see yet</h2>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          {children}
+        </main>
         <footer>
-          © {new Date().getFullYear()} klequis, {' '} <br/>
-          <a href='https://github.com/klequis/'>GitHub</a> &bull;{" "}
-          <a href='http://trivalleycoders.org/'>TriValley Coders</a> &bull;{" "}
-          <a href='https://www.linkedin.com/in/carlbecker/'>LinkedIn</a> &bull;{" "}
-          <a href='https://carlbecker.com/'>carlbecker.com</a>
+          <b>Put some content in the footer</b>
+          {new Date().getFullYear()}<br/>
+          <a href='https://github.com/nodeschool/eastbay'>GitHub</a> &bull;{" "}
         </footer>
       </div>
     )
