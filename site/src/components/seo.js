@@ -5,14 +5,14 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 const SEO = ({
   article = false,
-  slug,
-  description,
+  // slug,
+  // description,
   lang,
-  meta,
-  modifiedDate,
+  // meta,
+  // modifiedDate,
   pageUrl,
-  previewImage,
-  publishedDate,
+  // previewImage,
+  // publishedDate,
   title,
 }) => {
   const { site } = useStaticQuery(
@@ -36,17 +36,7 @@ const SEO = ({
     title: siteMetaTitle,
   } = site.siteMetadata
 
-  // Fixing this error:
-  //   We could not resolve the canonical URL because the
-  //   redirect path contained a cycle.
-  // Requires a '/' on the end of fullCononicalUrl
-  // https://github.com/klequis/coding-notebook/issues/5
-  const fullCanonicalUrl = `${siteMetaUrl}/${slug}/`
 
-  let pageUrlNoFinalSlash
-  if (pageUrl !== undefined) {
-    pageUrlNoFinalSlash = pageUrl.substring(0, pageUrl.length - 1)
-  }
 
   return (
     <Helmet
@@ -55,31 +45,31 @@ const SEO = ({
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      link={
-        slug
-          ? [
-              {
-                rel: 'canonical',
-                key: fullCanonicalUrl,
-                href: fullCanonicalUrl,
-              },
-            ]
-          : [{ rel: 'canonical', key: siteMetaUrl, href: siteMetaUrl }]
-      }
+      // link={
+      //   slug
+      //     ? [
+      //         {
+      //           rel: 'canonical',
+      //           key: fullCanonicalUrl,
+      //           href: fullCanonicalUrl,
+      //         },
+      //       ]
+      //     : [{ rel: 'canonical', key: siteMetaUrl, href: siteMetaUrl }]
+      // }
       // meta={allMeta.concat(meta)}
       meta={[
-        {
-          property: `og:image`,
-          content: previewImage,
-        },
-        {
-          property: `og:image:height`,
-          content: '286',
-        },
-        {
-          property: `og:image:width`,
-          content: '590',
-        },
+        // {
+        //   property: `og:image`,
+        //   content: previewImage,
+        // },
+        // {
+        //   property: `og:image:height`,
+        //   content: '286',
+        // },
+        // {
+        //   property: `og:image:width`,
+        //   content: '590',
+        // },
         {
           name: `description`,
           content: siteMetaDescription,
@@ -95,13 +85,16 @@ const SEO = ({
         {
           // assumes that if type is not specified it is the home page
           property: `og:type`,
-          content: article ? 'article' : `website`,
+          content: `website`,
         },
-        {
-          property: `og:url`,
-          // content: ogUrl,
-          content: fullCanonicalUrl,
-        },
+        // {
+        //   property: `og:url`,
+        //   // content: ogUrl,
+        //   content: fullCanonicalUrl,
+        // },
+
+        // TODO: KEEP THIS ONE
+        // TODO: get new app_id
         {
           property: `fb:app_id`,
           content: 495377417716964

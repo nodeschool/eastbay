@@ -27,24 +27,34 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___publishedDate], order: DESC }
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            description
-            modifiedDate(formatString: "MMMM DD, YYYY")
-            partOfBook
-            publishedDate(formatString: "MMMM DD, YYYY")
-            title
-          }
-        }
-      }
-    }
   }
 `
+
+// export const pageQuery = graphql`
+//   query {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//     allMarkdownRemark(
+//       sort: { fields: [frontmatter___publishedDate], order: DESC }
+//     ) {
+//       edges {
+//         node {
+//           excerpt
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             description
+//             modifiedDate(formatString: "MMMM DD, YYYY")
+//             partOfBook
+//             publishedDate(formatString: "MMMM DD, YYYY")
+//             title
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
