@@ -10,7 +10,6 @@ module.exports = {
     // },
   },
   plugins: [
-    `gatsby-plugin-mdx`,
 
     // {
     //   resolve: 'gatsby-source-filesystem',
@@ -60,12 +59,12 @@ module.exports = {
 
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
-      options: {
-        siteUrl: `http://nodeschool.io/eastbay`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+    //   options: {
+    //     siteUrl: `http://nodeschool.io/eastbay`,
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-typography',
       options: {
