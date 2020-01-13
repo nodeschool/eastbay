@@ -3,40 +3,25 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const SEO = ({
-  article = false,
-  // slug,
-  // description,
-  lang,
-  // meta,
-  // modifiedDate,
-  pageUrl,
-  // previewImage,
-  // publishedDate,
-  title,
-}) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            siteUrl
-          }
-        }
-      }
-    `
-  )
+const SEO = ({ lang, title }) => {
+  // const { site } = useStaticQuery(
+  //   graphql`
+  //     query {
+  //       site {
+  //         siteMetadata {
+  //           title
+  //           description
+  //           author
+  //           siteUrl
+  //         }
+  //       }
+  //     }
+  //   `
+  // )
 
-  const {
-    description: siteMetaDescription,
-    siteUrl: siteMetaUrl,
-    title: siteMetaTitle,
-  } = site.siteMetadata
-
-
+  const description = 'site description'
+  // const siteUrl = 'site url'
+  // const title = 'site title'
 
   return (
     <Helmet
@@ -44,7 +29,18 @@ const SEO = ({
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${title}`}
+      link={[
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700&display=swap',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&display=swap',
+        },
+      ]}
       // link={
       //   slug
       //     ? [
@@ -72,7 +68,7 @@ const SEO = ({
         // },
         {
           name: `description`,
-          content: siteMetaDescription,
+          content: description,
         },
         {
           property: `og:title`,
@@ -80,7 +76,7 @@ const SEO = ({
         },
         {
           property: `og:description`,
-          content: siteMetaDescription,
+          content: description,
         },
         {
           // assumes that if type is not specified it is the home page
@@ -97,31 +93,31 @@ const SEO = ({
         // TODO: get new app_id
         {
           property: `fb:app_id`,
-          content: 495377417716964
-        }
+          content: 495377417716964,
+        },
       ]}
     />
   )
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-  ogimage: 'none',
-}
+// SEO.defaultProps = {
+//   lang: `en`,
+//   meta: [],
+//   description: ``,
+//   ogimage: 'none',
+// }
 
-SEO.propTypes = {
-  article: PropTypes.bool,
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  modifiedDate: PropTypes.string,
-  pageUrl: PropTypes.string,
-  previewImage: PropTypes.string,
-  publishedDate: PropTypes.string.isRequired,
-  slug: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-}
+// SEO.propTypes = {
+//   article: PropTypes.bool,
+//   description: PropTypes.string,
+//   lang: PropTypes.string,
+//   meta: PropTypes.arrayOf(PropTypes.object),
+//   modifiedDate: PropTypes.string,
+//   pageUrl: PropTypes.string,
+//   previewImage: PropTypes.string,
+//   publishedDate: PropTypes.string.isRequired,
+//   slug: PropTypes.string.isRequired,
+//   title: PropTypes.string.isRequired,
+// }
 
 export default SEO
