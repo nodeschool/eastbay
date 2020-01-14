@@ -33,8 +33,11 @@ const NextEvent = () => {
 
     nav: {
       display: 'flex',
+      flexFlow: 'column',
       justifyContent: 'space-around',
       marginBottom: 12,
+      paddingLeft: 10,
+      paddingRight: 10,
       '@media (min-width: 1024px)': {
         button: {
           width: 200

@@ -43,10 +43,10 @@ const Button = ({ children, href }) => {
       letterSpacing: 0.5,
       // lineHeight: 36,
       inlineSize: 91, // new
-      marginBottom: 0,
+      marginBottom: 8,
       marginLeft: 4,
       marginRight: 4,
-      marginTop: 0,
+      marginTop: 8,
       minWidth: 156,
       outlineColor: 'rgb(255, 255, 255)',
       outlineStyle: 'none',

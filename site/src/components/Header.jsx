@@ -15,10 +15,11 @@ const Header = ({ title, subTitle }) => {
         color: '#fff',
         marginLeft: 'auto',
         marginRight: 'auto',
+        paddingBottom: 40,
         '@media (min-width: 1024px)': {
           display: 'flex',
           flexDirection: 'row',
-          padding: '20px 0',
+          padding: '20px 0 40px 0',
           maxWidth: 830,
         },
       },

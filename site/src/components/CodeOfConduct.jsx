@@ -23,7 +23,7 @@ const CodeOfConduct = () => {
         form. Sexual language and imagery is not appropriate for any event
         venue, including talks, workshops, parties, Twitter and other online
         media. Event participants violating these rules may be sanctioned or
-        expelled from the event at the discretion of the event organisers.
+        expelled from the event at the discretion of the event organizers.
       </p>
       <p>The organizers of <MonoFont>NodeSchool East Bay</MonoFont> follow the <a href='https://jsconf.com/codeofconduct.html'>JSConf Code of Conduct</a>.</p>
       <strong>
