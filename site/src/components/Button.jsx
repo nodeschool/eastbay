@@ -44,9 +44,10 @@ const Button = ({ children, href }) => {
       // lineHeight: 36,
       inlineSize: 91, // new
       marginBottom: 0,
-      marginLeft: 0,
-      marginRight: 0,
+      marginLeft: 4,
+      marginRight: 4,
       marginTop: 0,
+      minWidth: 156,
       outlineColor: 'rgb(255, 255, 255)',
       outlineStyle: 'none',
       outlineWidth: 0,

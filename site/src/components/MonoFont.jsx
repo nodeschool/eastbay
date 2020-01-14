@@ -1,7 +1,8 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import classNames from 'classnames'
 
-const MonoFont = ({ children, bold = true }) => {
+const MonoFont = ({ children, classes: Classes, bold = true }) => {
   const useStyles = createUseStyles({
     font: {
       fontFamily: "'Ubuntu Mono', monospace",
@@ -11,8 +12,9 @@ const MonoFont = ({ children, bold = true }) => {
   })
   const classes = useStyles()
   console.log('children', children)
+  const combinedClasses = classNames(Classes, classes.font)
 
-  return <span className={classes.font}>{children}</span>
+  return <span className={combinedClasses}>{children}</span>
 }
 
 export default MonoFont

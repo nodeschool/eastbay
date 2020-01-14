@@ -20,7 +20,8 @@ export default function Index() {
         backgroundColor: '#fff',
         fontFamily: "'Quattrocento Sans',sans-serif",
         margin: 0,
-        lineHeight: 1.5
+        lineHeight: 1.5,
+        // width: '100%',
       },
       a: {
         backgroundImage: 'none',
@@ -34,18 +35,18 @@ export default function Index() {
       },
       dt: {
         fontWeight: 'bold',
+        marginBottom: 10,
       },
       dd: {
         margin: '0 0 20px 0',
-
-      }
+      },
     },
   })
   useStyles()
   return (
     <ThemeProvider theme={theme}>
       {/* <CssBaseline /> */}
-      <SEO />
+      {/* <SEO /> */}
       <Page />
     </ThemeProvider>
   )

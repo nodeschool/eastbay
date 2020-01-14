@@ -33,7 +33,7 @@ const Page = () => {
   return (
     <>
       <header className={header}>
-        <Header />
+        {/* <Header /> */}
       </header>
       <main className={classes.outer}>
         <Main />
