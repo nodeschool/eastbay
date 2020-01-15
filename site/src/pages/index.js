@@ -12,16 +12,30 @@ import Page from '../components/Page'
 // import { theme } from '../theme'
 import theme from '../theme/theme'
 import SEO from '../components/seo'
+import 'normalize.css'
 
 export default function Index() {
   const useStyles = createUseStyles({
     '@global': {
       body: {
         backgroundColor: '#fff',
-        fontFamily: "'Quattrocento Sans',sans-serif",
+        fontFamily: "'Ubuntu', sans-serif",
+
+
+
+    
+
+
         margin: 0,
-        lineHeight: 1.5,
+        lineHeight: 1.75,
+        letterSpacing: 0.9,
         // width: '100%',
+      },
+      h1: {
+        fontSize: '2em'
+      },
+      h2: {
+        lineHeight: 1.3,
       },
       a: {
         backgroundImage: 'none',
@@ -44,10 +58,13 @@ export default function Index() {
   })
   useStyles()
   return (
+    <>
+    <SEO />
     <ThemeProvider theme={theme}>
       {/* <CssBaseline /> */}
-      {/* <SEO /> */}
+      
       <Page />
     </ThemeProvider>
+    </>
   )
 }

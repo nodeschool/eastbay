@@ -12,11 +12,11 @@ const Main = () => {
       marginLeft: 'auto',
     },
     ul: {
-      padding: 15
+      padding: 15,
     },
     ulOrganizers: {
-      paddingTop: 0
-    }
+      paddingTop: 0,
+    },
   })
   const classes = useStyles()
   return (
@@ -26,16 +26,22 @@ const Main = () => {
         <dt>What do I need to bring?</dt>
         <dd>Bring a laptop, a desire to learn, and all you friendship!</dd>
         <dt>Who organizes this event?</dt>
-        <dd>Carl Becker (@at_klequis), Srishti Sehtia &amp; Michael Costanza.</dd>
-        <dt>What actually happens at a <MonoFont>NodeSchool East Bay</MonoFont> event?</dt>
+        <dd>
+          Carl Becker (@at_klequis), Srishti Sehtia &amp; Michael Costanza.
+        </dd>
+        <dt>
+          What actually happens at a <MonoFont>NodeSchool East Bay</MonoFont>{' '}
+          event?
+        </dt>
 
         <dd>
-          <a href="https://nodeschool.io/">workshoppers</a> or hack on their own
-          side projects. There isn't a structured “curriculum” which must be
-          followed. <MonoFont>NodeSchool East Bay</MonoFont> events are an opportunity to hang out
-          with other learners and mentors in a low stress, encouraging
-          environment. Instead of the usual follow-along, presentation-driven
-          workshops, learners can either work on self-paced.
+          <MonoFont>NodeSchool East Bay</MonoFont> events are an opportunity to hang out with other
+          learners and mentors in a low stress, encouraging environment. Instead
+          of the usual follow-along, presentation-driven workshops, learners can
+          either work on{' '}
+          <a href="https://nodeschool.io/">self-paced workshoppers</a> or hack
+          on their own side projects. There isn't a structured “curriculum”
+          which must be followed.
           <br />
           <br />A typical event follows this schedule:
           <ul className={classes.ul}>
@@ -57,10 +63,10 @@ const Main = () => {
           </ul>
         </dd>
         <dt>What does it cost to attend?</dt>
-        <dd><MonoFont>NodeSchool East Bay</MonoFont> free!</dd>
-        <dt>
-          How do I become a mentor?
-        </dt>
+        <dd>
+          <MonoFont>NodeSchool East Bay</MonoFont> free!
+        </dd>
+        <dt>How do I become a mentor?</dt>
         <dd>
           We're always looking for people to volunteer to be mentors! We ask
           that prospective mentors:
@@ -98,9 +104,7 @@ const Main = () => {
             </li>
           </ul>
         </dd>
-        <dt>
-          More questions?
-        </dt>
+        <dt>More questions?</dt>
         <dd>
           <a href="https://github.com/nodeschool/sanfrancisco/issues">
             File an issue at our GitHub repo

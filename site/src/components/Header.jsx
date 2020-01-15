@@ -27,10 +27,25 @@ const Header = ({ title, subTitle }) => {
         display: 'flex',
       },
       title: {
-        // ...scale(1.5),
-        // marginBottom: rhythm(1.5),
-        // marginTop: 0,
         display: 'none',
+        '@media (min-width: 1024px)': {
+          display: 'inline',
+        },
+      },
+      subTitleDesktop: {
+        display: 'none',
+        '@media (min-width: 1024px)': {
+          paddingTop: 0,
+          marginTop: 0,
+          display: 'inline',
+        },
+      },
+      subTitleMobile: {
+        textAlign: 'center',
+        fontSize: '0.7em',
+        '@media (min-width: 1024px)': {
+          display: 'none'
+        }
       },
       link: {
         boxShadow: 'none',
@@ -39,45 +54,57 @@ const Header = ({ title, subTitle }) => {
       },
       headerLeft: {
         textAlign: 'center',
-
+        marginBottom: 0,
         '@media (min-width: 1024px)': {
           flexBasis: '20%',
           paddingRight: 24,
+          marginBottom: 30,
         },
-        
-        
-        
-
       },
       logo: {
-        // minWidth: 100,
-        width: 140,
+        width: 170,
+        '@media (min-width: 1024px)': {
+          width: 140,
+        },
       },
       headerRight: {
-        // display: 'flex',
-        // flexDirection: 'column',
         flexBasis: '80%',
       },
       logoText: {
-        display: 'flex',
+        // display: 'flex',
+        // flexFlow: 'column',
         justifyContent: 'center',
+        fontSize: '1.5em',
+        lineSpacing: '1px',
         '@media (min-width: 1024px)': {
-          flexFlow: 'column nowrap',
-          alignItems: 'flex-end',
-          alignContent: 'center',
+          // flexFlow: 'column nowrap',
+          // alignItems: 'flex-end',
+          // alignContent: 'center',
+          // fontSize: '1em',
         },
-        
       },
       logoTextNodeSchool: {
-        // fontSize: '0.9em',
         
+        // '@media (min-width: 1024px)': {
+        //   fontSize: '0.9em',
+        // }
       },
       logoTextEastBay: {
-        // fontSize: '1em',
-        paddingTop: '0.03em',
-        marginLeft: '0.5em',
+        
+        // '@media (min-width: 1024px)': {
+        //   fontSize: '1em',
+        // },
+        // paddingTop: '0.03em',
+        marginLeft: '0.4em',
       },
+      weHelpYou: {
+
+        fontSize: '2em',
+        marginTop: 15,
+        
+      }
     }
+    
   })
 
   const classes = useStyles()
@@ -91,6 +118,7 @@ const Header = ({ title, subTitle }) => {
             NodeSchool
           </MonoFont>
           <strong className={classes.logoTextEastBay}>East Bay</strong>
+          <div className={classes.subTitleMobile}>San Francisco</div>
         </div>
       </div>
 
@@ -100,7 +128,8 @@ const Header = ({ title, subTitle }) => {
             NodeSchool East Bay
           </Link>
         </h1>
-        <p>{subTitle}</p>
+        <p className={classes.subTitleDesktop}>East of San Francisco</p>
+        <h2 className={classes.weHelpYou}>We Help You Learn JavaScript</h2>        
         <p>
           <MonoFont>NodeSchool East Bay</MonoFont> is a monthly meetup dedicated
           to helping people learn JavaScript. We help people of all skill
