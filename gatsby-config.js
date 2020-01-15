@@ -17,6 +17,7 @@ module.exports = {
   siteMetadata: {
     title: 'My page',
   },
+  pathPrefix: `eastbay`,
 };
 
 
