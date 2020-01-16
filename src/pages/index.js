@@ -12,7 +12,7 @@ import Page from '../components/Page'
 // import { theme } from '../theme'
 import theme from '../theme/theme'
 import SEO from '../components/seo'
-import 'normalize.css'
+// import 'normalize.css'
 
 export default function Index() {
   const useStyles = createUseStyles({

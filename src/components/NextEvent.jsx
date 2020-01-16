@@ -38,11 +38,14 @@ const NextEvent = () => {
       marginBottom: 12,
       paddingLeft: 10,
       paddingRight: 10,
-      '@media (min-width: 1024px)': {
-        button: {
-          width: 200
-        }
-      }
+      [`@media (min-width: ${theme.breakpoints.tablet}px)`]: {
+        flexDirection: 'row'
+      },
+      // '@media (min-width: 1024px)': {
+      //   button: {
+      //     width: 200
+      //   }
+      // }
     },
     root: {
       color: '#fff !important',

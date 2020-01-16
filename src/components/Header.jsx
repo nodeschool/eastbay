@@ -5,112 +5,91 @@ import { createUseStyles } from 'react-jss'
 import iNSLogo from '../media/nodeschool.svg'
 import NextEvent from './NextEvent'
 import MonoFont from './MonoFont'
+import { green } from '@material-ui/core/colors'
 
-const Header = ({ title, subTitle }) => {
+const Header = () => {
   const useStyles = createUseStyles(theme => {
-    console.log('theme', theme)
+    console.log('theme', theme.breakpoints.tablet)
     return {
       wrapper: {
-        fontSize: 16,
         color: '#fff',
+        fontSize: 16,
         marginLeft: 'auto',
         marginRight: 'auto',
         paddingBottom: 40,
-        '@media (min-width: 1024px)': {
+        [`@media (min-width: ${theme.breakpoints.tablet}px)`]: {
           display: 'flex',
           flexDirection: 'row',
-          padding: '20px 0 40px 0',
           maxWidth: 830,
+          padding: '20px 0 40px 0',
         },
-      },
-      logoTitleRow: {
-        display: 'flex',
-      },
-      title: {
-        display: 'none',
-        '@media (min-width: 1024px)': {
-          display: 'inline',
-        },
-      },
-      subTitleDesktop: {
-        display: 'none',
-        '@media (min-width: 1024px)': {
-          paddingTop: 0,
-          marginTop: 0,
-          display: 'inline',
-        },
-      },
-      subTitleMobile: {
-        textAlign: 'center',
-        fontSize: '0.7em',
-        '@media (min-width: 1024px)': {
-          display: 'none'
-        }
-      },
-      link: {
-        boxShadow: 'none',
-        textDecoration: 'none',
-        color: '#fff',
       },
       headerLeft: {
         textAlign: 'center',
+        
         marginBottom: 0,
-        '@media (min-width: 1024px)': {
+        [`@media (min-width: ${theme.breakpoints.tablet}px)`]: {
           flexBasis: '20%',
-          paddingRight: 24,
+          paddingRight: 40,
           marginBottom: 30,
-        },
-      },
-      logo: {
-        width: 170,
-        '@media (min-width: 1024px)': {
-          width: 140,
         },
       },
       headerRight: {
         flexBasis: '80%',
       },
+      logo: {
+        width: 170,
+        filter: 'drop-shadow(0 0 15px rgba(0,0,0,0.25))',
+        // [`@media (min-width: ${theme.breakpoints.tablet}px)`]: {
+          // width: 140,
+        // },
+      },
       logoText: {
-        // display: 'flex',
-        // flexFlow: 'column',
-        justifyContent: 'center',
         fontSize: '1.5em',
         lineSpacing: '1px',
-        '@media (min-width: 1024px)': {
-          // flexFlow: 'column nowrap',
-          // alignItems: 'flex-end',
-          // alignContent: 'center',
-          // fontSize: '1em',
+
+        [`@media (min-width: ${theme.breakpoints.tablet}px)`]: {
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
         },
       },
       logoTextNodeSchool: {
-        
         // '@media (min-width: 1024px)': {
         //   fontSize: '0.9em',
         // }
       },
       logoTextEastBay: {
-        
-        // '@media (min-width: 1024px)': {
-        //   fontSize: '1em',
-        // },
-        // paddingTop: '0.03em',
         marginLeft: '0.4em',
+        [`@media (min-width: ${theme.breakpoints.tablet}px)`]: {
+          marginLeft: 0,
+        },
+      },
+      logoTextSanFrancisco: {
+        // margin: 0,
+        // padding: 0,
+        // [`@media (min-width: ${theme.breakpoints.tablet}px)`]: {
+          // paddingTop: 0,
+          // marginTop: 0,
+          // display: 'inline',
+        // },
+        //
+        // backgroundColor: 'green',
       },
       weHelpYou: {
-
         fontSize: '2em',
-        marginTop: 15,
-        
-      }
+        marginTop: '1em',
+        //
+        // backgroundColor: 'red'
+      },
     }
-    
   })
 
   const classes = useStyles()
+  console.log('classes', classes)
 
   return (
-    <div className={classes.wrapper}>
+    <div id="header" className={classes.wrapper}>
       <div className={classes.headerLeft}>
         <img src={iNSLogo} className={classes.logo} alt="nodeschool logo" />
         <div className={classes.logoText}>
@@ -118,18 +97,12 @@ const Header = ({ title, subTitle }) => {
             NodeSchool
           </MonoFont>
           <strong className={classes.logoTextEastBay}>East Bay</strong>
-          <div className={classes.subTitleMobile}>San Francisco</div>
+          <div className={classes.logoTextSanFrancisco}>San Francisco</div>
         </div>
       </div>
 
       <div className={classes.headerRight}>
-        <h1 className={classes.title}>
-          <Link to={'/'} className={classes.link}>
-            NodeSchool East Bay
-          </Link>
-        </h1>
-        <p className={classes.subTitleDesktop}>East of San Francisco</p>
-        <h2 className={classes.weHelpYou}>We Help You Learn JavaScript</h2>        
+        <h2 className={classes.weHelpYou}>We Help You Learn JavaScript</h2>
         <p>
           <MonoFont>NodeSchool East Bay</MonoFont> is a monthly meetup dedicated
           to helping people learn JavaScript. We help people of all skill

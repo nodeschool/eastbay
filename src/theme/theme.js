@@ -1,4 +1,7 @@
 const theme = {
+  breakpoints: {
+    tablet: 864,
+  },
   colors: {
     yellow: '#f7d648',
     // blue: '#08449c',
