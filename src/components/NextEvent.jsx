@@ -1,7 +1,5 @@
 import React from 'react'
-// import { rhythm, scale } from '../utils/typography'
 import { createUseStyles } from 'react-jss'
-import classNames from 'classnames'
 import Paper from '@material-ui/core/Paper'
 import Button from './Button'
 

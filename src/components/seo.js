@@ -32,11 +32,6 @@ const SEO = ({ lang, title }) => {
       titleTemplate={`%s | ${title}`}
       // <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap" rel="stylesheet"> 
       link={[
-        // {
-        //   rel: 'stylesheet',
-        //   href:
-        //     'https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700&display=swap',
-        // },
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap',

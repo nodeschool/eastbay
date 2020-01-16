@@ -1,11 +1,8 @@
 import React from 'react'
-// import { rhythm, scale } from '../utils/typography'
-import { Link } from 'gatsby'
 import { createUseStyles } from 'react-jss'
 import iNSLogo from '../media/nodeschool.svg'
 import NextEvent from './NextEvent'
 import MonoFont from './MonoFont'
-import { green } from '@material-ui/core/colors'
 
 const Header = () => {
   const useStyles = createUseStyles(theme => {
