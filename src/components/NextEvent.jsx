@@ -1,6 +1,5 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
-import Paper from '@material-ui/core/Paper'
 import Button from './Button'
 
 const NextEvent = () => {
@@ -11,6 +10,12 @@ const NextEvent = () => {
       display: 'flex',
       flexDirection: 'column',
       color: '#fff',
+      boxShadow:
+        '0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12)',
+      borderRadius: 4,
+      transition: 'box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+      backgroundColor: '#214C9B !important',
+      // new for shadow
     },
     details: {
       display: 'flex',
@@ -37,7 +42,7 @@ const NextEvent = () => {
       paddingLeft: 10,
       paddingRight: 10,
       [`@media (min-width: ${theme.breakpoints.tablet}px)`]: {
-        flexDirection: 'row'
+        flexDirection: 'row',
       },
       // '@media (min-width: 1024px)': {
       //   button: {
@@ -47,47 +52,37 @@ const NextEvent = () => {
     },
     root: {
       color: '#fff !important',
-      backgroundColor: '#073a86 !important',
       backgroundColor: `${theme.colors.blue} !important`,
     },
   }))
   const classes = useStyles()
   return (
-    <Paper
-      className={classes.wrapper}
-      elevation={3}
-      classes={{
-        root: classes.root,
-      }}
-    >
-      <>
-        <div className={classes.details}>
-          <h2 className={classes.title}>Our Next Event is on December 25th</h2>
-          <ul className={classes.detailsList}>
-            <li>
-              <strong>When?</strong>&nbsp;&nbsp;&nbsp;Saturday Jun 00 from 1 -
-              5PM
-            </li>
-            <li>
-              <strong>Where?</strong>&nbsp;&nbsp;&nbsp;TBD 000 Noname St, San
-              Ramon, CA 94582
-            </li>
-            <li>
-              <strong>What?</strong>&nbsp;&nbsp;&nbsp;Learning, mentoring,
-              javascript bffs &amp; pizza
-            </li>
-          </ul>
-        </div>
-        <nav className={classes.nav}>
-          <Button href="https://www.meetup.com/trivalleycoders/">
-            Sign up as a Learner
-          </Button>
-          <Button href="https://www.meetup.com/trivalleycoders/">
-            Sign up as a Mentor
-          </Button>
-        </nav>
-      </>
-    </Paper>
+    <div className={classes.wrapper}>
+      <div className={classes.details}>
+        <h2 className={classes.title}>Our Next Event is on December 25th</h2>
+        <ul className={classes.detailsList}>
+          <li>
+            <strong>When?</strong>&nbsp;&nbsp;&nbsp;Saturday Jun 00 from 1 - 5PM
+          </li>
+          <li>
+            <strong>Where?</strong>&nbsp;&nbsp;&nbsp;TBD 000 Noname St, San
+            Ramon, CA 94582
+          </li>
+          <li>
+            <strong>What?</strong>&nbsp;&nbsp;&nbsp;Learning, mentoring,
+            javascript bffs &amp; pizza
+          </li>
+        </ul>
+      </div>
+      <nav className={classes.nav}>
+        <Button href="https://www.meetup.com/trivalleycoders/">
+          Sign up as a Learner
+        </Button>
+        <Button href="https://www.meetup.com/trivalleycoders/">
+          Sign up as a Mentor
+        </Button>
+      </nav>
+    </div>
   )
 }
 

@@ -1,28 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
 
 const SEO = ({ lang, title }) => {
-  // const { site } = useStaticQuery(
-  //   graphql`
-  //     query {
-  //       site {
-  //         siteMetadata {
-  //           title
-  //           description
-  //           author
-  //           siteUrl
-  //         }
-  //       }
-  //     }
-  //   `
-  // )
-
   const description = 'site description'
-  // const siteUrl = 'site url'
-  // const title = 'site title'
-
   return (
     <Helmet
       htmlAttributes={{
@@ -30,7 +10,6 @@ const SEO = ({ lang, title }) => {
       }}
       title={title}
       titleTemplate={`%s | ${title}`}
-      // <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap" rel="stylesheet"> 
       link={[
         {
           rel: 'stylesheet',
