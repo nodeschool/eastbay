@@ -11,7 +11,6 @@ const MonoFont = ({ children, classes: Classes, bold = true }) => {
     },
   })
   const classes = useStyles()
-  console.log('children', children)
   const combinedClasses = classNames(Classes, classes.font)
 
   return <span className={combinedClasses}>{children}</span>

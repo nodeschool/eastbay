@@ -12,7 +12,6 @@ const Footer = () => {
       paddingBottom: '20px',
     },
     anchor: {
-      // color: '#08449c',
       color: '#1985ff',
     },
     githubLogo: {

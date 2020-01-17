@@ -7,7 +7,6 @@ const Main = () => {
   const useStyles = createUseStyles({
     wrapper: {
       maxWidth: 830,
-      // minWidth: '100%',
       marginRight: 'auto',
       marginLeft: 'auto',
     },

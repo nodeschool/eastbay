@@ -15,7 +15,6 @@ const NextEvent = () => {
       borderRadius: 4,
       transition: 'box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
       backgroundColor: '#214C9B !important',
-      // new for shadow
     },
     details: {
       display: 'flex',
@@ -41,21 +40,18 @@ const NextEvent = () => {
       marginBottom: 12,
       paddingLeft: 10,
       paddingRight: 10,
-      [`@media (min-width: ${theme.breakpoints.tablet}px)`]: {
+      [`@media (min-width: ${theme.breakpoints.phone}px)`]: {
         flexDirection: 'row',
       },
-      // '@media (min-width: 1024px)': {
-      //   button: {
-      //     width: 200
-      //   }
-      // }
     },
     root: {
       color: '#fff !important',
       backgroundColor: `${theme.colors.blue} !important`,
     },
   }))
+
   const classes = useStyles()
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.details}>

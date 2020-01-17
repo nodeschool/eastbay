@@ -5,6 +5,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "latest",
+    "gatsby-plugin-gtag": "^1.0.12",
     "gatsby-plugin-jss": "^2.1.18",
     "gatsby-plugin-react-helmet": "latest",
     "gh-pages": "^2.2.0",

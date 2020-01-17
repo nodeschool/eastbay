@@ -6,7 +6,6 @@ import MonoFont from './MonoFont'
 
 const Header = () => {
   const useStyles = createUseStyles(theme => {
-    console.log('theme', theme.breakpoints.tablet)
     return {
       wrapper: {
         color: '#fff',
@@ -37,9 +36,6 @@ const Header = () => {
       logo: {
         width: 170,
         filter: 'drop-shadow(0 0 15px rgba(0,0,0,0.25))',
-        // [`@media (min-width: ${theme.breakpoints.tablet}px)`]: {
-          // width: 140,
-        // },
       },
       logoText: {
         fontSize: '1.5em',
@@ -51,11 +47,6 @@ const Header = () => {
           justifyContent: 'center',
         },
       },
-      logoTextNodeSchool: {
-        // '@media (min-width: 1024px)': {
-        //   fontSize: '0.9em',
-        // }
-      },
       logoTextEastBay: {
         marginLeft: '0.4em',
         [`@media (min-width: ${theme.breakpoints.tablet}px)`]: {
@@ -63,27 +54,16 @@ const Header = () => {
         },
       },
       logoTextSanFrancisco: {
-        // margin: 0,
-        // padding: 0,
-        // [`@media (min-width: ${theme.breakpoints.tablet}px)`]: {
-          // paddingTop: 0,
-          // marginTop: 0,
-          // display: 'inline',
-        // },
-        //
-        // backgroundColor: 'green',
+        fontSize: '0.75em'
       },
       weHelpYou: {
         fontSize: '2em',
         marginTop: '1em',
-        //
-        // backgroundColor: 'red'
       },
     }
   })
 
   const classes = useStyles()
-  console.log('classes', classes)
 
   return (
     <div id="header" className={classes.wrapper}>

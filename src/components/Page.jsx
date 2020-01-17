@@ -11,20 +11,15 @@ const Page = () => {
     return {
       outer: {
         maxWidth: '100%',
-        padding: '0 20px'
+        padding: '0 20px',
       },
-      // inner: {
-      //   maxWidth: 830,
-      //   marginLeft: 'auto',
-      //   marginRight: 'auto',
-      // },
       header: {
         backgroundColor: theme.colors.darkBlue,
       },
       footer: {
         backgroundColor: '#282C35',
         color: 'white',
-      }
+      },
     }
   })
   const classes = useStyles()

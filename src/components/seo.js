@@ -1,98 +1,52 @@
+/* eslint-disable */
+
 import React from 'react'
 import Helmet from 'react-helmet'
+
+const googleFontHref = "https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap"
 
 const SEO = ({ lang, title }) => {
   const description = 'site description'
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${title}`}
-      link={[
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap',
-        },
-      ]}
-      // link={
-      //   slug
-      //     ? [
-      //         {
-      //           rel: 'canonical',
-      //           key: fullCanonicalUrl,
-      //           href: fullCanonicalUrl,
-      //         },
-      //       ]
-      //     : [{ rel: 'canonical', key: siteMetaUrl, href: siteMetaUrl }]
-      // }
-      // meta={allMeta.concat(meta)}
-      meta={[
+      // htmlAttributes={{
+      //   lang,
+      // }}
+      // title='NodeSchool East Bay'
+      // titleTemplate={`%s | NodeSchool East Bay`}
+      // link={[
+      //   {
+      //     rel: 'stylesheet',
+      //     href:
+      //       'https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap',
+      //   },
+      // ]}
+      // meta={[
         // {
         //   property: `og:image`,
         //   content: previewImage,
         // },
         // {
-        //   property: `og:image:height`,
-        //   content: '286',
-        // },
-        // {
-        //   property: `og:image:width`,
-        //   content: '590',
-        // },
-        {
-          name: `description`,
-          content: description,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: description,
-        },
-        {
-          // assumes that if type is not specified it is the home page
-          property: `og:type`,
-          content: `website`,
-        },
-        // {
-        //   property: `og:url`,
-        //   // content: ogUrl,
-        //   content: fullCanonicalUrl,
-        // },
+        
 
-        // TODO: KEEP THIS ONE
-        // TODO: get new app_id
-        {
-          property: `fb:app_id`,
-          content: 495377417716964,
-        },
-      ]}
-    />
+      // ]}
+    >
+      
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83381302-4"></script>
+      <title>Some Title</title>
+      <meta name="description" content="description" />
+      <link rel="stylesheet" href={googleFontHref} />
+      <link rel="canonical" href="https://nodeschool.io/eastbay" />
+      <meta property="og:image:height" content="286" />
+      <meta property="og:image:width" content="590" />
+      <meta name="description" content="A place to learn NodeJS and JavaScript"></meta>
+      <meta property="og:description" content="A blog on software development."></meta>
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="NodeSchool East Bay (SF)"></meta>
+      <meta property="og:url" content="https://nodeschool.io/eastbay/"></meta>
+      <meta property="fb:app_id" content="2239915996309728" />
+    </Helmet>
   )
 }
-
-// SEO.defaultProps = {
-//   lang: `en`,
-//   meta: [],
-//   description: ``,
-//   ogimage: 'none',
-// }
-
-// SEO.propTypes = {
-//   article: PropTypes.bool,
-//   description: PropTypes.string,
-//   lang: PropTypes.string,
-//   meta: PropTypes.arrayOf(PropTypes.object),
-//   modifiedDate: PropTypes.string,
-//   pageUrl: PropTypes.string,
-//   previewImage: PropTypes.string,
-//   publishedDate: PropTypes.string.isRequired,
-//   slug: PropTypes.string.isRequired,
-//   title: PropTypes.string.isRequired,
-// }
 
 export default SEO
