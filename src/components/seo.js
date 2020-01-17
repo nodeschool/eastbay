@@ -33,14 +33,14 @@ const SEO = ({ lang, title }) => {
     >
       
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83381302-4"></script>
-      <title>Some Title</title>
-      <meta name="description" content="description" />
+      <title>NodeSchool | East Bay</title>
+      <meta name="description" content="A place to learn NodeJS and JavaScript" />
       <link rel="stylesheet" href={googleFontHref} />
       <link rel="canonical" href="https://nodeschool.io/eastbay" />
       <meta property="og:image:height" content="286" />
       <meta property="og:image:width" content="590" />
       <meta name="description" content="A place to learn NodeJS and JavaScript"></meta>
-      <meta property="og:description" content="A blog on software development."></meta>
+      <meta property="og:description" content="A place to learn NodeJS and JavaScript"></meta>
       <meta property="og:type" content="website" />
       <meta property="og:title" content="NodeSchool East Bay (SF)"></meta>
       <meta property="og:url" content="https://nodeschool.io/eastbay/"></meta>
