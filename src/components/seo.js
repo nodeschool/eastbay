@@ -9,30 +9,16 @@ const SEO = ({ lang, title }) => {
   const description = 'site description'
   return (
     <Helmet
-      // htmlAttributes={{
-      //   lang,
-      // }}
-      // title='NodeSchool East Bay'
-      // titleTemplate={`%s | NodeSchool East Bay`}
-      // link={[
-      //   {
-      //     rel: 'stylesheet',
-      //     href:
-      //       'https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap',
-      //   },
-      // ]}
       // meta={[
         // {
         //   property: `og:image`,
         //   content: previewImage,
         // },
-        // {
         
+        // {
 
       // ]}
     >
-      
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83381302-4"></script>
       <title>NodeSchool | East Bay</title>
       <meta name="description" content="A place to learn NodeJS and JavaScript" />
       <link rel="stylesheet" href={googleFontHref} />
@@ -50,3 +36,5 @@ const SEO = ({ lang, title }) => {
 }
 
 export default SEO
+
+// <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83381302-4"></script>
