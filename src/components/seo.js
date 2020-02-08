@@ -23,6 +23,11 @@ const SEO = ({ lang, title }) => {
       <meta name="description" content="A place to learn NodeJS and JavaScript" />
       <link rel="stylesheet" href={googleFontHref} />
       <link rel="canonical" href="https://nodeschool.io/eastbay" />
+      <meta property="og:image" 
+        content="https://res.cloudinary.com/klequis/image/upload/v1581179074/ns.east-bay/ns.social.png"
+                 
+        data-react-helmet="true">
+      </meta>
       <meta property="og:image:height" content="286" />
       <meta property="og:image:width" content="590" />
       <meta name="description" content="A place to learn NodeJS and JavaScript"></meta>

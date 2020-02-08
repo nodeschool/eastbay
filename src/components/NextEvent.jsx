@@ -1,6 +1,7 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import Button from './Button'
+import MonoFont from './MonoFont'
 
 const NextEvent = () => {
   const useStyles = createUseStyles(theme => ({
@@ -55,18 +56,16 @@ const NextEvent = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.details}>
-        <h2 className={classes.title}>Our Next Event is on December 25th</h2>
         <ul className={classes.detailsList}>
           <li>
-            <strong>When?</strong>&nbsp;&nbsp;&nbsp;Saturday Jun 00 from 1 - 5PM
+            <strong>When?</strong>&nbsp;&nbsp;&nbsp;<MonoFont bold={false}>Coming soon!</MonoFont>
           </li>
           <li>
-            <strong>Where?</strong>&nbsp;&nbsp;&nbsp;TBD 000 Noname St, San
-            Ramon, CA 94582
+            <strong>Where?</strong>&nbsp;&nbsp;&nbsp;<MonoFont bold={false}>Looking for a home along the 680 corridor, Walnut Creek to Pleasanton.</MonoFont>
           </li>
           <li>
-            <strong>What?</strong>&nbsp;&nbsp;&nbsp;Learning, mentoring,
-            javascript bffs &amp; pizza
+            <strong>What?</strong>&nbsp;&nbsp;&nbsp;<MonoFont bold={false}>Learning, mentoring,
+            javascript bffs &amp; pizza</MonoFont>
           </li>
         </ul>
       </div>
