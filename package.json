@@ -8,7 +8,7 @@
     "gatsby-plugin-gtag": "^1.0.12",
     "gatsby-plugin-jss": "^5.15.0",
     "gatsby-plugin-react-helmet": "latest",
-    "gh-pages": "^2.2.0",
+    "gh-pages": "^5.0.0",
     "react": "latest",
     "react-dom": "latest",
     "react-helmet": "latest",
